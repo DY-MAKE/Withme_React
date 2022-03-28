@@ -1,23 +1,14 @@
-# Getting Started with Create React App
+# Withme_React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+프로젝트 실행
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Default Port: `3000`
 
 ### `yarn build`
 
@@ -29,18 +20,65 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `yarn lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Eslint 실행
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `yarn lint:fix`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Eslint 실행과 자동으로 수정 가능한 항목들을 수정
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Directory Structure
 
-## Learn More
+```bash
+├── src
+|  ├── components
+|  |  └── Custom Components
+|  ├── index.tsx
+|  ├── pages
+|  |  └── Routed Pages
+|  ├── react-app-env.d.ts
+|  ├── reportWebVitals.ts
+|  └── setupTests.ts
+├── craco.config.js
+├── package.json
+├── tsconfig.json
+├── tsconfig.paths.json
+└── yarn.lock
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Commit Convention
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+프로젝트 커밋에 관련된 규칙
+
+### Commit Message
+
+커밋 메세지에 들어가야 하는 정보
+
+* **CommitType**: 커밋 종류
+* **title**: 커밋에 대한 간단한 요약
+* **description**: 세부적인 수정 사항, '-' 을 줄 시작에 입력
+
+#### Commit Type
+
+* **feat (Feature)**: 새로운 기능 추가
+* **fix**: 버그 수정
+* **docs**: 문서 수정
+* **style**: 코드 포매팅
+* **ref (Refactor)**: 코드 리팩토링
+
+#### Commit Example
+
+```
+feat: User 로그인 구현
+
+- UserContext 추가
+- Login API 추가
+- Login 페이지 추가
+```
+
+```
+fix: API 통신 이슈 해결
+
+- 백엔드 Base URL이 잘못 세팅되어 있던 문제 해결
+```
