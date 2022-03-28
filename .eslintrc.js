@@ -18,7 +18,7 @@ module.exports = {
         sourceType: 'module',
         project: 'tsconfig.json'
     },
-    ignorePatterns: ['.eslintrc.js'],
+    ignorePatterns: ['.eslintrc.js', 'craco.config.js'],
     plugins: ['react', '@typescript-eslint'],
     rules: {
         'prettier/prettier': 'error',
