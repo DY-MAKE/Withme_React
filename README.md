@@ -51,6 +51,26 @@ Eslint 실행과 자동으로 수정 가능한 항목들을 수정
 └── yarn.lock
 ```
 
+## Branch
+
+브랜치 관리 방법
+
+### master
+
+가능한 오류 없이 유지시키기
+
+만약 병합 이후 오류가 발생한다면 해당 커밋은 **revert**
+
+### feature/
+
+새로운 기능 개발/개선등 작업이 필요할 때 사용
+
+브랜치에서의 개발이 완료되면 master 브랜치로 병합
+
+##### Example
+`feature/UserLogin`
+`feature/OptimizeSearchEngine`
+
 ## Commit Convention
 
 프로젝트 커밋에 관련된 규칙
