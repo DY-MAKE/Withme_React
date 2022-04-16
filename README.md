@@ -78,6 +78,12 @@ CRA에서 기본으로 제공해주는 세팅 사용
 .env.development => dev 모드에서 사용됨
 .env.production => build 시에 사용됨
 
+#### 환경변수 추가시 참고사항
+
+`REACT_APP_varblename=value` 형식으로 추가
+
+이외의 형식은 Craco에서 걸러버림
+
 ## Branch
 
 브랜치 관리 방법
