@@ -8,11 +8,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 install Dependencies modules
 
-### `yarn start`
+### `yarn dev`
 
-프로젝트 실행
+개발 모드에서 프로젝트 실행
 
 ##### Default Port: `3000`
+
+### `yarn dev:nb`
+
+no browser mode
+
+개발 모드에서 프로젝트 실행, 브라우져를 함께 실행하지 않음
+
+##### Default Port: `3000`
+
+### `yarn prod`
+
+프로덕션 모드에서 프로젝트 실행
+
+##### Default Port: `80`
 
 ### `yarn build`
 
@@ -23,6 +37,8 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+Sourcemap 생성은 비활성화 되어있음
 
 ### `yarn lint`
 
@@ -38,9 +54,11 @@ Eslint 실행과 자동으로 수정 가능한 항목들을 수정
 ├── src
 |  ├── components
 |  |  └── Custom Components
-|  ├── index.tsx
+|  ├── hooks
+|  |  └── Custom Hooks
 |  ├── pages
 |  |  └── Routed Pages
+|  ├── index.tsx
 |  ├── react-app-env.d.ts
 |  ├── reportWebVitals.ts
 |  └── setupTests.ts
@@ -48,8 +66,17 @@ Eslint 실행과 자동으로 수정 가능한 항목들을 수정
 ├── package.json
 ├── tsconfig.json
 ├── tsconfig.paths.json
+├── .env.development
+├── .env.production
 └── yarn.lock
 ```
+
+### Environment File
+
+CRA에서 기본으로 제공해주는 세팅 사용
+
+.env.development => dev 모드에서 사용됨
+.env.production => build 시에 사용됨
 
 ## Branch
 
@@ -68,6 +95,7 @@ Eslint 실행과 자동으로 수정 가능한 항목들을 수정
 브랜치에서의 개발이 완료되면 master 브랜치로 병합
 
 ##### Example
+
 `feature/UserLogin`
 `feature/OptimizeSearchEngine`
 
@@ -79,17 +107,17 @@ Eslint 실행과 자동으로 수정 가능한 항목들을 수정
 
 커밋 메세지에 들어가야 하는 정보
 
-* **CommitType**: 커밋 종류
-* **title**: 커밋에 대한 간단한 요약
-* **description**: 세부적인 수정 사항, '-' 을 줄 시작에 입력
+-   **CommitType**: 커밋 종류
+-   **title**: 커밋에 대한 간단한 요약
+-   **description**: 세부적인 수정 사항, '-' 을 줄 시작에 입력
 
 #### Commit Type
 
-* **feat (Feature)**: 새로운 기능 추가
-* **fix**: 버그 수정
-* **docs**: 문서 수정
-* **style**: 코드 포매팅
-* **ref (Refactor)**: 코드 리팩토링
+-   **feat (Feature)**: 새로운 기능 추가
+-   **fix**: 버그 수정
+-   **docs**: 문서 수정
+-   **style**: 코드 포매팅
+-   **ref (Refactor)**: 코드 리팩토링
 
 #### Commit Example
 
