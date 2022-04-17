@@ -21,6 +21,7 @@ module.exports = {
     ignorePatterns: ['.eslintrc.js', 'craco.config.js'],
     plugins: ['react', '@typescript-eslint'],
     rules: {
+        '@typescript-eslint/no-unused-vars': 'warn',
         'prettier/prettier': 'error',
         'react/function-component-definition': 'off',
         'react/jsx-filename-extension': [
@@ -57,5 +58,7 @@ module.exports = {
                 'newlines-between': 'always',
             },
         ],
+        'jsx-a11y/media-has-caption': 'off',
+        'jsx-a11y/control-has-associated-label': 'off'
     },
 };
