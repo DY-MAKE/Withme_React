@@ -1,11 +1,13 @@
+import Dictaphone from '@components/Dictaphone';
 import Test from '@components/Test';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Home: React.FC = () => {
     return (
         <div>
             Home
-            <Test />
+            {/* <Test /> */}
+            <Dictaphone />
         </div>
     );
 };

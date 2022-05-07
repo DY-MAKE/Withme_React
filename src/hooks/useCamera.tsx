@@ -7,7 +7,7 @@ const useCamera = (userOptions?: MediaStreamConstraints) => {
     const [track, setTrack] = useState<MediaStreamTrack | null>(null);
 
     const videoRef = useRef<HTMLVideoElement>(null);
-    const options: MediaStreamConstraints = useMemo(() => ({ audio: true, video: true }), []);
+    const options: MediaStreamConstraints = useMemo(() => ({ audio: false, video: true }), []);
 
     useEffectOnce(() => {
         navigator.mediaDevices
